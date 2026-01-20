@@ -13,6 +13,7 @@ dotenv.config({});
 const app = express();
 
 // middleware
+app.get("/", (req, res) => res.send("Server is running"));
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 app.use(cookieParser());
